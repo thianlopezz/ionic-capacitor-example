@@ -10,7 +10,17 @@ export class FotosService {
 
   getFotos() {
     return this.http.get('http://localhost:8000/fotos');
+  }
 
-    // codigo
+  insertFoto(params) {
+    return this.http.post('http://localhost:8000/fotos', params);
+  }
+
+  updateFoto(params) {
+    return this.http.put('http://localhost:8000/fotos', params);
+  }
+
+  deleteFoto(id) {
+    return this.http.delete('http://localhost:8000/fotos/' + id);
   }
 }
